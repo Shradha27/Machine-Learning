@@ -7,5 +7,8 @@ df['LH_PCT'] = (df['Adj. High'] - df['Adj. Low']) / df['Adj. Low']
 df['PCT'] = (df['Adj. Close'] - df['Adj. Open']) / df['Adj. Open']
 
 df = df[['Adj. Close','LH_PCT','PCT','Adj. Volume']]
-
+forecast_col = 'Adj. Close'
+df.fillna(-9999, inplace=True)
+forecast_out = int(math.ceil(0.1*len(df)))
+df['Label']=df[forecast_col].shift(-forecast_out)
 print(df.head())
