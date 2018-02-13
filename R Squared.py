@@ -28,7 +28,7 @@ regression_line = [(m*x)+b for x in xs]
 r_squared = coefficient_of_determination(ys,regression_line)
 print(r_squared)
 
-##plt.scatter(xs,ys,color='#003F72',label='data')
-##plt.plot(xs, regression_line, label='regression line')
-##plt.legend(loc=4)
-##plt.show()
+plt.scatter(xs,ys,color='#003F72',label='data')
+plt.plot(xs, regression_line, label='regression line')
+plt.legend(loc=4)
+plt.show()
