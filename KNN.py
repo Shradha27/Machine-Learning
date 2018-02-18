@@ -21,4 +21,9 @@ colors = ["r.", "b.", "k.", "g.", "c."]
 for i in range(len(X)):
     plt.plot(X[i][0],X[i][1], colors[labels[i]], markersize = 15)
 plt.scatter(centroids[:, 0], centroids[:, 1], marker='x', s=100, linewidths=5)
+<<<<<<< HEAD
 plt._show()
+=======
+plt._show()
+
+>>>>>>> f737238a557036d3890a9818a5b4b7a1b816c1d3
