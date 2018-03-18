@@ -5,23 +5,6 @@ from sklearn.cluster import KMeans
 from sklearn import preprocessing
 import pandas as pd
 
-'''
-Titanic Dataset column details:-
-Pclass - Passanger Class (1 = 1st class; 2 = 2nd class; 3 = 3rd class)
-survival - Survived (0 = No; 1 = Yes)
-name - Name of the passanger
-sex - Gender of the passanger
-sibsp - Number of siblings/spouses on board
-parch - Number of parents/children on board
-ticket - ticket number
-fare - Passanger fare (british pounds)
-cabin - Cabin
-embarked - Port of embarkation (C = Cherbourg; Q = Queenstow; S = Southhampton)
-boat - Lifeboat number
-body - Body Identification Number
-home.dest - Home or Destination
-'''
-
 df = pd.read_excel('../../datasets/titanic.xls')
 
 df.drop(['body', 'name'], 1, inplace=True)
