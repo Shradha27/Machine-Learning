@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 from sklearn import preprocessing
 import pandas as pd
 
-df = pd.read_excel('../../datasets/titanic.xls')
+df = pd.read_excel('Datasets/Titanic.xls')
 
 df.drop(['body', 'name'], 1, inplace=True)
 df.fillna(0, inplace=True)
@@ -57,8 +57,6 @@ X = np.array([[1, 2],
               [8, 8],
               [1, 0.6],
               [9, 11]])
-# plt.scatter(X[:, 0], X[:, 1], s=150)
-# plt.show()
 clf = KMeans(n_clusters=2)
 clf.fit(X)
 centroids = clf.cluster_centers_
